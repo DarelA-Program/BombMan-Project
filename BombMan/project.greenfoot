@@ -1,9 +1,10 @@
 #Greenfoot project file
+class.MyWorld.image=Desert_Map.jpg
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
-height=585
+height=583
 package.numDependencies=0
 package.numTargets=1
 project.charset=UTF-8
@@ -30,5 +31,5 @@ target1.y=0
 version=3.0.0
 width=825
 world.lastInstantiated=MyWorld
-xPosition=411
-yPosition=145
+xPosition=240
+yPosition=51

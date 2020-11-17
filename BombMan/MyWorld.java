@@ -24,7 +24,5 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        TestByRana testByRana =  new TestByRana();
-        addObject(testByRana, 131, 269);
     }
 }

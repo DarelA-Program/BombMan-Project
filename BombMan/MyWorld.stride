@@ -24,10 +24,7 @@
 That is: create the initial objects and add them to the world.</javadoc>
             <params/>
             <throws/>
-            <body>
-                <variable type="TestByRana" type-java="TestByRana" name="testByRana" value="new TestByRana()" value-java=" new TestByRana()" enable="true"/>
-                <call expression="addObject(testByRana,131,269)" expression-java="addObject(testByRana, 131, 269)" enable="true"/>
-            </body>
+            <body/>
         </method>
     </methods>
 </class>

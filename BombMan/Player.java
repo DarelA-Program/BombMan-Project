@@ -24,21 +24,21 @@ public class Player extends Actor
      */
     
     public void checkKeyPressed(){
-        if(Greenfoot.isKeyDown("up")) {
-            //setRotation(Direction.UP);
-            turn(-3);
+    if(Greenfoot.isKeyDown("up")) {
+       setLocation(getX(), getY() - 5);
+        
     }
     if(Greenfoot.isKeyDown("down")) {
-        //setRotation(Direction.DOWN);
-        turn(3);
+       setLocation(getX(), getY() + 5); 
+        
     }
     if(Greenfoot.isKeyDown("left")) {
-        //setRotation(Direction.LEFT);
-        move(-3);
+       setLocation(getX() - 5, getY()); 
+        
     }
     if(Greenfoot.isKeyDown("right")) {
-        //setRotation(Direction.RIGHT);
-        move(3);
+       setLocation(getX() + 5, getY()); 
+        
     }
 }
 }

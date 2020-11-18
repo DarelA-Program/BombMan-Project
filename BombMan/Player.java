@@ -23,22 +23,18 @@ public class Player extends Actor
      * This method is made for the character to move left, right, up, down;
      */
     
-    public void checkKeyPressed(){
+    private void checkKeyPressed(){
     if(Greenfoot.isKeyDown("up")) {
        setLocation(getX(), getY() - 5);
-        
     }
     if(Greenfoot.isKeyDown("down")) {
        setLocation(getX(), getY() + 5); 
-        
     }
     if(Greenfoot.isKeyDown("left")) {
        setLocation(getX() - 5, getY()); 
-        
     }
     if(Greenfoot.isKeyDown("right")) {
        setLocation(getX() + 5, getY()); 
-        
     }
 }
 }

@@ -437,5 +437,9 @@ public class MyWorld extends World
         coin43.setLocation(455,559);
         coin43.setLocation(455,559);
         coin42.setLocation(354,559);
+        Player player = new Player();
+        addObject(player,477,275);
+        Snake snake = new Snake();
+        addObject(snake,118,428);
     }
 }

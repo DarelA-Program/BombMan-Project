@@ -11,31 +11,50 @@ public class Player extends Actor
     /**
      * this method is called when the Player touches the coin the coin will disapear
      */
-   public void act() {
-        checkKeyPressed();
+   public void act() {      
         collectingCoins();
+        moveAround();
    }
-  
-    
-
-    /**
+   
+   /**
      * This method is made for the character to move left, right, up, down;
      */
     
-    private void checkKeyPressed(){
+    public void moveAround(){
+        int x = getX();
+        int y = getY();
+      
     if(Greenfoot.isKeyDown("up")) {
-       setLocation(getX(), getY() - 7);
-    }
-    if(Greenfoot.isKeyDown("down")) {
-       setLocation(getX(), getY() + 7); 
-    }
-    if(Greenfoot.isKeyDown("left")) {
-       setLocation(getX() - 7, getY()); 
-    }
-    if(Greenfoot.isKeyDown("right")) {
-       setLocation(getX() + 7, getY()); 
-    }
+       setLocation(x, y - 6);
+       setRotation(90);
+       if (hitWalls() == true)
+       setLocation(x,y + 6);
 }
+
+    if(Greenfoot.isKeyDown("down")) {
+     setLocation(x, y + 6);
+       setRotation(270);
+     if (hitWalls() == true)
+       setLocation(x,y + 6); 
+}
+ 
+   if(Greenfoot.isKeyDown("left")) {
+       setLocation(x - 6, y);
+       setRotation(0);
+       if (hitWalls() == true)
+       setLocation(x,y + 6);
+}
+ 
+ if(Greenfoot.isKeyDown("right")) {
+     setLocation(x + 6, y);
+     setRotation(180);
+     if (hitWalls() == true)
+       setLocation(x,y + 6);    
+}
+}
+
+    
+
   /**
    * This method is made for the goal of this game, each time the player
    * collects coins.
@@ -51,7 +70,21 @@ public class Player extends Actor
             getWorld().showText("WINNER COINS COLLECTED:" + coinsCount, 300, 300);
         }
     }
+    public boolean hitWalls() {
+        if (isTouching(Wall.class))
+        {
+        return true;
+        }
+    else
+        {
+        return false;
+        }
     }
+}
+
+
+
+
 
     
      

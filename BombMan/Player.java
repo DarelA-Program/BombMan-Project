@@ -47,7 +47,7 @@ public class Player extends Actor
  
  if(Greenfoot.isKeyDown("right")) {
      setLocation(x + 6, y);
-     setRotation(180);
+     setRotation(0);
      if (hitWalls() == true)
        setLocation(x,y + 6);    
 }

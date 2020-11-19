@@ -21,5 +21,9 @@ public class Snake extends Actor
     if(isTouching(Player.class)) {
            removeTouching(Player.class);
 }
+if (isAtEdge()) {
+    turn (4);
 }
 }
+}
+

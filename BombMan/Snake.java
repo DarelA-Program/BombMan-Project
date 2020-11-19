@@ -14,12 +14,16 @@ public class Snake extends Actor
      */
     public void act() 
     {
-        if (Greenfoot.getRandomNumber(200) < 10) {
+    if (Greenfoot.getRandomNumber(200) < 10) {
            turn (Greenfoot.getRandomNumber(30));
-    } 
+} 
     move(2);
     if(isTouching(Player.class)) {
-        removeTouching(Player.class);
+           removeTouching(Player.class);
+}
+if (isAtEdge()) {
+    turn (4);
 }
 }
 }
+

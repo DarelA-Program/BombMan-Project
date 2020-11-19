@@ -10,9 +10,12 @@ class.Wall.image=barrel.png
 dependency1.from=InstructionMenu
 dependency1.to=MainMenu
 dependency1.type=UsesDependency
-dependency10.from=Snake
-dependency10.to=Player
+dependency10.from=Player
+dependency10.to=Wall
 dependency10.type=UsesDependency
+dependency11.from=Snake
+dependency11.to=Player
+dependency11.type=UsesDependency
 dependency2.from=MainMenu
 dependency2.to=MainText
 dependency2.type=UsesDependency
@@ -23,26 +26,35 @@ dependency4.from=MainMenu
 dependency4.to=InstructionMenu
 dependency4.type=UsesDependency
 dependency5.from=MyWorld
-dependency5.to=Wall
+dependency5.to=Coin
 dependency5.type=UsesDependency
 dependency6.from=MyWorld
-dependency6.to=Coin
+dependency6.to=Player
 dependency6.type=UsesDependency
 dependency7.from=MyWorld
-dependency7.to=Player
+dependency7.to=Snake
 dependency7.type=UsesDependency
 dependency8.from=MyWorld
-dependency8.to=Snake
+dependency8.to=Wall
 dependency8.type=UsesDependency
 dependency9.from=Player
 dependency9.to=Coin
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
 height=784
 package.numDependencies=10
+=======
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=275
+editor.fx.0.y=-4
+height=744
+package.numDependencies=11
+>>>>>>> 063f2ccd45d62a30191484ea99fc3b37a0c094db
 package.numTargets=8
 project.charset=UTF-8
 publish.hasSource=false
@@ -115,7 +127,12 @@ target8.width=80
 target8.x=0
 target8.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=982
 world.lastInstantiated=MainMenu
+=======
+width=1382
+world.lastInstantiated=MyWorld
+>>>>>>> 063f2ccd45d62a30191484ea99fc3b37a0c094db
 xPosition=0
 yPosition=0

@@ -5,13 +5,13 @@ import greenfoot.*;
 /**
  * 
  */
-public class MyWorld extends World
+public class Level1 extends World
 {
 
     /**
      * Constructor for objects of class MyWorld.
      */
-    public MyWorld()
+    public Level1()
     {
         super(700, 600, 1);
         prepare();

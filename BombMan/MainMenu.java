@@ -38,7 +38,7 @@ public class MainMenu extends World
     {
         music();
         if (Greenfoot.isKeyDown("enter")){
-            Greenfoot.setWorld(new MyWorld());
+            Greenfoot.setWorld(new Level1());
             Greenfoot.playSound("Click.wav");
         }
         

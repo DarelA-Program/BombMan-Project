@@ -21,37 +21,42 @@ public class Player extends Actor
      */
     
     public void moveAround(){
-        int x = getX();
-        int y = getY();
+    int x = getX();
+    int y = getY();
       
     if(Greenfoot.isKeyDown("up")) {
-       setLocation(x, y - 6);
-       setRotation(90);
-       if (hitWalls() == true)
-       setLocation(x,y + 6);
-}
+        setLocation(x, y - 6);
+        setRotation(90);
+    }
+    if (hitWalls() == true) {
+        setLocation(x,y + 6);
+    }
+    
 
     if(Greenfoot.isKeyDown("down")) {
      setLocation(x, y + 6);
        setRotation(270);
-     if (hitWalls() == true)
+    }
+    if (hitWalls() == true) {
        setLocation(x,y + 6); 
-}
+    }
  
-   if(Greenfoot.isKeyDown("left")) {
+    if(Greenfoot.isKeyDown("left")) {
        setLocation(x - 6, y);
        setRotation(0);
-       if (hitWalls() == true)
+    }
+    if (hitWalls() == true) {
        setLocation(x,y + 6);
-}
+    }
  
- if(Greenfoot.isKeyDown("right")) {
+    if(Greenfoot.isKeyDown("right")) {
      setLocation(x + 6, y);
      setRotation(0);
-     if (hitWalls() == true)
+    }
+    if (hitWalls() == true) {
        setLocation(x,y + 6);    
-}
-}
+    }
+  }
 
     
 
@@ -71,16 +76,16 @@ public class Player extends Actor
             getWorld().showText("WINNER COINS COLLECTED:" + coinsCount, 300, 300);
         }
     }
-    public boolean hitWalls() {
+  public boolean hitWalls() {
         if (isTouching(Wall.class))
         {
         return true;
         }
-    else
+        else
         {
         return false;
         }
-    }
+  }
 }
 
 

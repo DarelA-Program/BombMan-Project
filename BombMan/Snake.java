@@ -12,18 +12,18 @@ public class Snake extends Actor
      * This method makes the snake move randomly
      * As soon as the game starts the snake will move randomly
      */
-    public void act() 
-    {
-    if (Greenfoot.getRandomNumber(200) < 10) {
+  public void act() 
+  {
+   if (Greenfoot.getRandomNumber(200) < 10) {
            turn (Greenfoot.getRandomNumber(30));
-} 
+   } 
     move(2);
-    if(isTouching(Player.class)) {
+   if(isTouching(Player.class)) {
            removeTouching(Player.class);
-}
-if (isAtEdge()) {
+   }
+   if (isAtEdge()) {
     turn (4);
-}
-}
+   }
+  }
 }
 

@@ -63,7 +63,8 @@ public class Player extends Actor
     if (isTouching(Coin.class)) {
           removeTouching(Coin.class);
           coinsCount = coinsCount + 1;
-          getWorld().showText("Coins Collected:" + coinsCount, 580, 580);
+          Greenfoot.playSound("135936__bradwesson__collectcoin.wav");
+          getWorld().showText("Coins Collected:" + coinsCount, 600, 50);
         }
     if (coinsCount == 48) {
             Greenfoot.stop();

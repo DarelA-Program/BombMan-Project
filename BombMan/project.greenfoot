@@ -40,21 +40,12 @@ dependency8.type=UsesDependency
 dependency9.from=Player
 dependency9.to=Coin
 dependency9.type=UsesDependency
-<<<<<<< HEAD
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
-height=784
-package.numDependencies=10
-=======
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=275
-editor.fx.0.y=-4
-height=744
+editor.fx.0.height=26
+editor.fx.0.width=158
+editor.fx.0.x=-21333
+editor.fx.0.y=-21333
+height=26
 package.numDependencies=11
->>>>>>> 063f2ccd45d62a30191484ea99fc3b37a0c094db
 package.numTargets=8
 project.charset=UTF-8
 publish.hasSource=false
@@ -127,12 +118,7 @@ target8.width=80
 target8.x=0
 target8.y=0
 version=3.0.0
-<<<<<<< HEAD
-width=982
+width=158
 world.lastInstantiated=MainMenu
-=======
-width=1382
-world.lastInstantiated=MyWorld
->>>>>>> 063f2ccd45d62a30191484ea99fc3b37a0c094db
 xPosition=0
 yPosition=0

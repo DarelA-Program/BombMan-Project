@@ -9,21 +9,36 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Snake extends Actor
 {
     /**
-     * This method makes the snake move randomly
-     * As soon as the game starts the snake will move randomly
+     * All the methods are called here
      */
   public void act() 
   {
-   if (Greenfoot.getRandomNumber(200) < 10) {
+      moveSnake();
+      eatPlayer();
+  }
+   /**
+    * This method makes the snake move randomly
+     * As soon as the game starts the snake will move randomly
+    */
+  private void moveSnake()
+  {
+    if (Greenfoot.getRandomNumber(200) < 10) {
            turn (Greenfoot.getRandomNumber(30));
    } 
     move(2);
-   if(isTouching(Player.class)) {
-           removeTouching(Player.class);
-   }
    if (isAtEdge()) {
     turn (4);
    }
-  }
+    }
+  /**
+   * This method is to when the snake eats the player
+   */
+  private void eatPlayer()
+  {
+     if(isTouching(Player.class)) {
+           removeTouching(Player.class);
+           Greenfoot.stop();
+   }
+    }
 }
 

@@ -25,9 +25,9 @@ public class Snake extends Actor
     if (Greenfoot.getRandomNumber(200) < 10) {
            turn (Greenfoot.getRandomNumber(30));
    } 
-    move(2);
-   if (isAtEdge()) {
-    turn (4);
+    move(4);
+   if (isAtEdge() == true) {
+    turn (7);
    }
     }
   /**

@@ -10,12 +10,13 @@ public class Move extends Actor
 {
     /**
     * Act - do whatever the Move wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+    * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
         // Add your action code here.
     } 
+    
     public void moveAround()
      {
       if(Greenfoot.isKeyDown("right")) {
@@ -39,42 +40,39 @@ if(Greenfoot.isKeyDown("down")) {
 public void slide() {
     int x = getX();
     int y = getY();
-if(Greenfoot.isKeyDown("right")) {
+    if(Greenfoot.isKeyDown("right")) {
        setLocation(x + 4, y);
        if (hitWalls()) {
-          setLocation(x - 4, y);
-       }
-    }
-if(Greenfoot.isKeyDown("left")) {
-       setLocation(x - 4, y);
-       if (hitWalls()) {
-          setLocation(x + 4, y);
-       }
-    }   
-if(Greenfoot.isKeyDown("up")) {
-       setLocation(x, y - 4);  
-       if (hitWalls()) {
-           setLocation(x, y + 4);
+          setLocation(x - 1, y);
         }
     }
-if(Greenfoot.isKeyDown("down")) {
+    if(Greenfoot.isKeyDown("left")) {
+        setLocation(x - 4, y);
+        if (hitWalls()) {
+          setLocation(x + 1, y);
+        }
+    }
+    if(Greenfoot.isKeyDown("up")) {
+       setLocation(x, y - 4);  
+       if (hitWalls()) {
+          setLocation(x, y + 1);
+        }
+     }
+    if(Greenfoot.isKeyDown("down")) {
        setLocation(x, y + 4);   
        if (hitWalls()) {
-           setLocation(x, y- 4);
-       }
-}
-}
-
-
+           setLocation(x, y- 1);
+        }
+     }
+    }
    
-
-
 public boolean hitWalls() {
-    if (isTouching(Wall.class))
+      if (isTouching(Wall.class))
     {
-        return true;
+         return true;
      }else{
-        return false;
+           return false;
+     
     }
 }
 }

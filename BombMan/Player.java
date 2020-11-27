@@ -29,8 +29,8 @@ public class Player extends Move
     if (coinsCount == 48) {
             Greenfoot.stop();
             getWorld().showText("WINNER COINS COLLECTED:" + coinsCount, 300, 300);
-        }
     }
+  }
 }
 
 

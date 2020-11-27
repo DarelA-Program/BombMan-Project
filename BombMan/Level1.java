@@ -252,5 +252,13 @@ public class Level1 extends MainWorld
         addObject(fly11,76,111);
         Fly fly12 = new Fly();
         addObject(fly12,656,346);
+        removeObject(fly8);
+        removeObject(coin27);
+        removeObject(fly12);
+        removeObject(fly3);
+        removeObject(fly5);
+        removeObject(fly2);
+        Player player = new Player();
+        addObject(player,163,31);
     }
 }

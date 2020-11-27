@@ -24,6 +24,8 @@ public class Fly extends Enemies
      private void eatPlayer() { 
       if(isTouching(Player.class)) {
            removeTouching(Player.class);
+           Greenfoot.playSound("game-over.wav");
+           Greenfoot.stop();
         }
     }
 }

@@ -21,6 +21,7 @@ public class Move extends Actor
      {
       if(Greenfoot.isKeyDown("right")) {
           setRotation(0);
+<<<<<<< HEAD
           move(6);
 }
 if(Greenfoot.isKeyDown("left")) {
@@ -34,6 +35,21 @@ if(Greenfoot.isKeyDown("up")) {
 if(Greenfoot.isKeyDown("down")) {
           setRotation(90);
           move(6);
+=======
+          move(8);
+}
+if(Greenfoot.isKeyDown("left")) {
+          setRotation(180);
+          move(8);
+}
+if(Greenfoot.isKeyDown("up")) {
+          setRotation(270);
+          move(8);
+}
+if(Greenfoot.isKeyDown("down")) {
+          setRotation(90);
+          move(8);
+>>>>>>> 415d07d4a8b4a799e3b50a9403112cb87af0d8c7
 }
 }
 

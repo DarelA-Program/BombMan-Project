@@ -8,15 +8,17 @@ import greenfoot.*;
 public class Player extends Move
 {
     private int coinsCount = 0;
+    private int flowerCount = 0;
     /**
      * this method is called when the Player touches the coin the coin will disapear
      */
   public void act() {      
         collectingCoins();
+        collectingFlowers();
         slide();
    }
   /**
-   * This method is made for the goal of this game, each time the player
+   * This method is made for the first level of this game, each time the player
    * collects coins.
    */
     private void collectingCoins(){
@@ -28,9 +30,26 @@ public class Player extends Move
         }
     if (coinsCount == 17) {
             Greenfoot.stop();
-            getWorld().showText("WINNER COINS COLLECTED:" + coinsCount, 300, 300);
+            getWorld().showText("On To The Next Mission:" + coinsCount, 400, 300);
     }
   }
+   /**
+   * This method is made for the second level of this game, each time the player
+   * collects flowers.
+   */
+   private void collectingFlowers() {
+   if (isTouching(flower.class)) {
+          removeTouching(flower.class);
+          flowerCount = flowerCount + 1;
+          Greenfoot.playSound("135936__bradwesson__collectcoin.wav");
+          getWorld().showText("Flowers Collected:" + flowerCount, 600, 50);
+        }
+   if (flowerCount == 13) {
+            Greenfoot.stop();
+            getWorld().showText("On To The Last Mission:" + flowerCount, 400, 300);
+    }
+    
+    }
 }
 
 

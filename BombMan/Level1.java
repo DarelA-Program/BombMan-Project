@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level1 extends MainWorld
 {
-
+    
     /**
      * Constructor for objects of class Level1.
      * 
@@ -166,7 +166,8 @@ public class Level1 extends MainWorld
         Fly fly2 = new Fly();
         addObject(fly2,346,208);
         Fly fly3 = new Fly();
-        addObject(fly3,489,297);
+        //<<<<<<< HEAD
+        //addObject(fly3,489,297);
         Coin coin17 = new Coin();
         addObject(coin17,59,196);
         coin2.setLocation(653,178);
@@ -183,5 +184,38 @@ public class Level1 extends MainWorld
         addObject(snake2,465,363);
         wall4.setLocation(670,136);
         wall4.setLocation(670,136);
+
+        addObject(fly3,86,204);
+        Fly fly4 = new Fly();
+        addObject(fly4,671,254);
+        Fly fly5 = new Fly();
+        addObject(fly5,307,138);
+        Fly fly6 = new Fly();
+        addObject(fly6,332,336);
+        Fly fly7 = new Fly();
+        addObject(fly7,22,366);
+        Fly fly8 = new Fly();
+        addObject(fly8,647,28);
+        Fly fly9 = new Fly();
+        addObject(fly9,434,195);
+        Fly fly10 = new Fly();
+        addObject(fly10,93,273);
+        Fly fly11 = new Fly();
+        addObject(fly11,76,111);
+        Fly fly12 = new Fly();
+        addObject(fly12,656,346);
+        removeObject(fly8);
+        //removeObject(coin27);
+        removeObject(fly12);
+        removeObject(fly3);
+        removeObject(fly5);
+        removeObject(fly2);
+        //Player player = new Player();
+        addObject(player,163,31);
+        //>>>>>>> 415d07d4a8b4a799e3b50a9403112cb87af0d8c7
+        removeObject(fly11);
+        removeObject(fly7);
+        removeObject(fly6);
+        removeObject(fly4);
     }
 }

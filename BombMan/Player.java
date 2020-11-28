@@ -26,7 +26,7 @@ public class Player extends Move
           Greenfoot.playSound("135936__bradwesson__collectcoin.wav");
           getWorld().showText("Coins Collected:" + coinsCount, 600, 50);
         }
-    if (coinsCount == 48) {
+    if (coinsCount == 17) {
             Greenfoot.stop();
             getWorld().showText("WINNER COINS COLLECTED:" + coinsCount, 300, 300);
     }

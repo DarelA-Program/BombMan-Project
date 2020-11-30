@@ -14,42 +14,28 @@ public class Move extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+	// Add your action code here.
     } 
     
     public void moveAround()
      {
       if(Greenfoot.isKeyDown("right")) {
-          setRotation(0);
-<<<<<<< HEAD
-          move(6);
+	  setRotation(0);
+
+	  move(6);
 }
 if(Greenfoot.isKeyDown("left")) {
-          setRotation(180);
-          move(6);
+	  setRotation(180);
+	  move(6);
 }
 if(Greenfoot.isKeyDown("up")) {
-          setRotation(270);
-          move(6);
+	  setRotation(270);
+	  move(6);
 }
 if(Greenfoot.isKeyDown("down")) {
-          setRotation(90);
-          move(6);
-=======
-          move(8);
-}
-if(Greenfoot.isKeyDown("left")) {
-          setRotation(180);
-          move(8);
-}
-if(Greenfoot.isKeyDown("up")) {
-          setRotation(270);
-          move(8);
-}
-if(Greenfoot.isKeyDown("down")) {
-          setRotation(90);
-          move(8);
->>>>>>> 415d07d4a8b4a799e3b50a9403112cb87af0d8c7
+	  setRotation(90);
+	  move(6);
+
 }
 }
 
@@ -59,35 +45,35 @@ public void slide() {
     if(Greenfoot.isKeyDown("right")) {
        setLocation(x + 4, y);
        if (hitWalls()) {
-          setLocation(x - 1, y);
-        }
+	  setLocation(x - 1, y);
+	}
     }
     if(Greenfoot.isKeyDown("left")) {
-        setLocation(x - 4, y);
-        if (hitWalls()) {
-          setLocation(x + 1, y);
-        }
+	setLocation(x - 4, y);
+	if (hitWalls()) {
+	  setLocation(x + 1, y);
+	}
     }
     if(Greenfoot.isKeyDown("up")) {
        setLocation(x, y - 4);  
        if (hitWalls()) {
-          setLocation(x, y + 1);
-        }
+	  setLocation(x, y + 1);
+	}
      }
     if(Greenfoot.isKeyDown("down")) {
        setLocation(x, y + 4);   
        if (hitWalls()) {
-           setLocation(x, y- 1);
-        }
+	   setLocation(x, y- 1);
+	}
      }
     }
    
 public boolean hitWalls() {
       if (isTouching(Wall.class) || (isTouching(WallSide.class)))
     {
-         return true;
+	 return true;
      }else{
-           return false;
+	   return false;
      
     }
 }

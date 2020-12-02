@@ -17,28 +17,6 @@ public class Move extends Actor
 	// Add your action code here.
     } 
     
-    public void moveAround()
-     {
-      if(Greenfoot.isKeyDown("right")) {
-	  setRotation(0);
-
-	  move(6);
-}
-if(Greenfoot.isKeyDown("left")) {
-	  setRotation(180);
-	  move(6);
-}
-if(Greenfoot.isKeyDown("up")) {
-	  setRotation(270);
-	  move(6);
-}
-if(Greenfoot.isKeyDown("down")) {
-	  setRotation(90);
-	  move(6);
-
-}
-}
-
 public void slide() {
     int x = getX();
     int y = getY();

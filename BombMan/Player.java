@@ -1,3 +1,5 @@
+
+
 import lang.stride.*;
 import greenfoot.*;
 
@@ -16,7 +18,25 @@ public class Player extends Move
         collectingCoins();
         collectingFlowers();
         slide();
-   }
+        
+     if(Greenfoot.isKeyDown("right")) {
+	  setRotation(0);
+	  move(4);
+     }
+     if(Greenfoot.isKeyDown("left")) {
+	  setRotation(180);
+	  move(4);
+     }
+     if(Greenfoot.isKeyDown("up")) {
+	  setRotation(270);
+	  move(4);
+     }
+     if(Greenfoot.isKeyDown("down")) {
+	  setRotation(90);
+	  move(4);
+     }
+  }
+  
   /**
    * This method is made for the first level of this game, each time the player
    * collects coins.

@@ -21,6 +21,7 @@ public class MainWorld extends World
         super(700, 400, 1); 
         addObject(countDown, 676, 15);
         countDown.setValue(300);
+        
     }
     
     public void act()
@@ -45,4 +46,5 @@ public class MainWorld extends World
           start = 1; 
        }  
     }
+   
 }

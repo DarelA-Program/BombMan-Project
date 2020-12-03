@@ -17,37 +17,57 @@ public class Move extends Actor
 	// Add your action code here.
     } 
     
+     public void moveAround()
+     {
+      if(Greenfoot.isKeyDown("right")) {
+	  setRotation(0);
+	  move(6);
+}
+if(Greenfoot.isKeyDown("left")) {
+	  setRotation(180);
+	  move(6);
+}
+if(Greenfoot.isKeyDown("up")) {
+	  setRotation(270);
+	  move(6);
+}
+if(Greenfoot.isKeyDown("down")) {
+	  setRotation(90);
+	  move(6);
+}
+}
+
 public void slide() {
     int x = getX();
     int y = getY();
     if(Greenfoot.isKeyDown("right")) {
        setLocation(x + 4, y);
        if (hitWalls()) {
-	  setLocation(x - 1, y);
+	  setLocation(x - 4, y);
 	}
-    }
+}
     if(Greenfoot.isKeyDown("left")) {
 	setLocation(x - 4, y);
 	if (hitWalls()) {
-	  setLocation(x + 1, y);
+	  setLocation(x + 4, y);
 	}
     }
     if(Greenfoot.isKeyDown("up")) {
        setLocation(x, y - 4);  
        if (hitWalls()) {
-	  setLocation(x, y + 1);
-	}
+	  setLocation(x, y + 4);
+	} 
      }
     if(Greenfoot.isKeyDown("down")) {
        setLocation(x, y + 4);   
        if (hitWalls()) {
-	   setLocation(x, y- 1);
-	}
+	   setLocation(x, y- 4);
+	} 
      }
     }
-   
-public boolean hitWalls() {
-      if (isTouching(Wall.class) || (isTouching(WallSide.class)))
+    
+    public boolean hitWalls() {
+      if (isTouching(Wall2.class) || isTouching(WallSide2.class))
     {
 	 return true;
      }else{
@@ -56,6 +76,10 @@ public boolean hitWalls() {
     }
 }
 }
+
+   
+   
+    
 
 
 

@@ -18,15 +18,15 @@ public class Fly extends Enemies
         eatPlayer();
     }    
     
-     /**
+    /**
       * This method will remove the player if it is touching the fly object
       */
      private void eatPlayer() { 
       if(isTouching(Player.class)) {
            removeTouching(Player.class);
            Greenfoot.playSound("game-over.wav");
-           Greenfoot.stop();
-        }
+           Greenfoot.setWorld(new GameOverScreen());
+      }
     }
 }
 

@@ -18,22 +18,23 @@ public class Player extends Move
   public void act() {      
         collectingCoins();
         collectingFlowers();
+        collectingRedCoin();
         slide();
      if(Greenfoot.isKeyDown("right")) {
-	  setRotation(0);
-	  move(4);
+      setRotation(0);
+      move(4);
      }
      if(Greenfoot.isKeyDown("left")) {
-	  setRotation(180);
-	  move(4);
+      setRotation(180);
+      move(4);
      }
      if(Greenfoot.isKeyDown("up")) {
-	  setRotation(270);
-	  move(4);
+      setRotation(270);
+      move(4);
      }
      if(Greenfoot.isKeyDown("down")) {
-	  setRotation(90);
-	  move(4);
+      setRotation(90);
+      move(4);
      }
   }
   
@@ -47,7 +48,7 @@ public class Player extends Move
           coinsCount = coinsCount + 1;
           Greenfoot.playSound("135936__bradwesson__collectcoin.wav");
           getWorld().showText("Coins Collected:" + coinsCount, 600, 50);
-        }
+     }
     if (coinsCount == 17) {
             Greenfoot.stop();
             getWorld().showText("On To The Next Mission:" + coinsCount, 400, 300);
@@ -68,13 +69,13 @@ public class Player extends Move
    if (flowerCount == 13) {
             Greenfoot.stop();
             getWorld().showText("On To The Last Mission:" + flowerCount, 400, 300);
-            Greenfoot.setWorld(new Level3());
-    }
-    }
-    
-       /**
+            Greenfoot.setWorld(new Confirmation());
+   }
+}
+   
+   /**
    * This method is made for the second level of this game, each time the player
-   * collects flowers.
+   * collects redCoins.
    */
    private void collectingRedCoin() {
    if (isTouching(RedCoin.class)) {
@@ -82,12 +83,12 @@ public class Player extends Move
           RedCoinCount = RedCoinCount + 1;
           Greenfoot.playSound("135936__bradwesson__collectcoin.wav");
           getWorld().showText("Red Coins Collected:" + RedCoinCount, 600, 50);
-        }
-   if (RedCoinCount == 13) {
+   }
+      if (flowerCount == 13) {
             Greenfoot.stop();
-            getWorld().showText("You win" + RedCoinCount, 400, 300);
-    }
-    }
+            Greenfoot.setWorld(new MainMenu());
+   }
+  }
 }
 
 

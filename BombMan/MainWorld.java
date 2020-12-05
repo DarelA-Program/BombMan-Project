@@ -37,7 +37,7 @@ public class MainWorld extends World
            if (countDown.getValue() == 0)
            {
                Greenfoot.stop();
-               addObject(new GameOver(), 300, 169);
+               Greenfoot.setWorld(new GameOverScreen());
            }
        }  
        

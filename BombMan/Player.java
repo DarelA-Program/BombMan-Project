@@ -19,7 +19,7 @@ public class Player extends Move
         collectingCoins();
         collectingFlowers();
         collectingRedCoin();
-        slide();
+       slide();
      if(Greenfoot.isKeyDown("right")) {
       setRotation(0);
       move(4);
@@ -49,7 +49,7 @@ public class Player extends Move
           Greenfoot.playSound("135936__bradwesson__collectcoin.wav");
           getWorld().showText("Coins Collected:" + coinsCount, 600, 50);
      }
-    if (coinsCount == 17) {
+    if (coinsCount == 22) {
             Greenfoot.stop();
             getWorld().showText("On To The Next Mission:" + coinsCount, 400, 300);
             Greenfoot.setWorld(new Level2());

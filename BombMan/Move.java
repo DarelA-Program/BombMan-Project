@@ -43,7 +43,7 @@ public void slide() {
     if(Greenfoot.isKeyDown("right")) {
        setLocation(x + 4, y);
        if (hitWalls()) {
-	  setLocation(x - 4, y);
+ 	  setLocation(x - 4, y);
 	}
 }
     if(Greenfoot.isKeyDown("left")) {
@@ -54,19 +54,19 @@ public void slide() {
     }
     if(Greenfoot.isKeyDown("up")) {
        setLocation(x, y - 4);  
-       if (hitWalls()) {
+      if (hitWalls()) {
 	  setLocation(x, y + 4);
 	} 
      }
     if(Greenfoot.isKeyDown("down")) {
        setLocation(x, y + 4);   
-       if (hitWalls()) {
-	   setLocation(x, y- 4);
-	} 
+       if (hitWalls()) {	   
+           setLocation(x, y- 4);	
+        } 
      }
     }
     
-    public boolean hitWalls() {
+  public boolean hitWalls() {
       if (isTouching(Wall2.class) || isTouching(WallSide2.class))
     {
 	 return true;

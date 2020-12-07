@@ -38,6 +38,7 @@ public class Snake extends Actor
      if(isTouching(Player.class)) {
            removeTouching(Player.class);
            Greenfoot.playSound("game-over.wav");
+           Greenfoot.setWorld(new GameOverScreen());
    }
   }
 }

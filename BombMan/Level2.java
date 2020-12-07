@@ -23,51 +23,57 @@ public class Level2 extends MainWorld
      */
     private void prepare()
     {
-        Snake snake = new Snake();
-        addObject(snake,664,77);
-        Snake snake2 = new Snake();
-        addObject(snake2,672,284);
-        Snake snake3 = new Snake();
-        addObject(snake3,71,292);
-        Snake snake4 = new Snake();
-        addObject(snake4,292,318);
-        Snake snake5 = new Snake();
-        addObject(snake5,492,276);
-        Snake snake6 = new Snake();
-        addObject(snake6,426,93);
-        Snake snake7 = new Snake();
-        addObject(snake7,261,142);
-        flower flower = new flower();
-        addObject(flower,356,180);
-        flower flower2 = new flower();
-        addObject(flower2,448,169);
-        flower flower3 = new flower();
-        addObject(flower3,503,169);
-        flower flower4 = new flower();
-        addObject(flower4,588,163);
-        flower flower5 = new flower();
-        addObject(flower5,610,240);
-        flower flower6 = new flower();
-        addObject(flower6,372,244);
-        flower flower7 = new flower();
-        addObject(flower7,400,329);
-        flower flower8 = new flower();
-        addObject(flower8,592,336);
-        flower flower9 = new flower();
-        addObject(flower9,163,303);
-        flower flower10 = new flower();
-        addObject(flower10,219,217);
-        flower flower11 = new flower();
-        addObject(flower11,264,268);
-        flower flower12 = new flower();
-        addObject(flower12,554,92);
-        flower flower13 = new flower();
-        addObject(flower13,492,346);
+
+        Ant ant = new Ant();
+        addObject(ant,3,45);
+        Ant ant2 = new Ant();
+        addObject(ant2,3,145);
+        Ant ant3 = new Ant();
+        addObject(ant3,3,245);
+        Ant ant4 = new Ant();
+        addObject(ant4,3,345);
+
+        Ant2 ant52 = new Ant2();
+        addObject(ant52,227,145);
+        Ant2 ant62 = new Ant2();
+        addObject(ant62,227,245);
+
+        Ant2 ant82 = new Ant2();
+        addObject(ant82,427,145);
+        Ant2 ant92 = new Ant2();
+        addObject(ant92,427,245);
+
+        Ant2 ant212 = new Ant2();
+        addObject(ant212,627,145);
+        Ant2 ant222 = new Ant2();
+        addObject(ant222,627,245);
+
         Player player = new Player();
-        addObject(player,62,80);
-        Fly fly = new Fly();
-        addObject(fly,689,381);
-        Fly fly2 = new Fly();
-        addObject(fly2,690,202);
+        addObject(player,67,80);
+
+        flower flower = new flower();
+        addObject(flower,226,74);
+        flower flower1 = new flower();
+        addObject(flower1,426,74);
+        flower flower2 = new flower();
+        addObject(flower2,626,74);
+        flower flower3 = new flower();
+        addObject(flower3,226,174);
+        flower flower21 = new flower();
+        addObject(flower21,426,174);
+        flower flower22 = new flower();
+        addObject(flower22,426,274);
+        flower flowe3r = new flower();
+        addObject(flowe3r,426,374);
+        flower flower4 = new flower();
+        addObject(flower4,226,274);
+        flower flower5 = new flower();
+        addObject(flower5,226,374);
+        flower floweree = new flower();
+        addObject(floweree,626,174);
+        flower flowere = new flower();
+        addObject(flowere,626,274);
+        flower flowerr = new flower();
+        addObject(flowerr,626,374);
     }
 }

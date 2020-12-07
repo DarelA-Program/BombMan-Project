@@ -16,5 +16,5 @@ This project is licensed under the terms of Elohe Darel Argot
 Creative Commons Attribution 4.0
 
 - Credits - 
-One of the sound is from book-scenario-ch5-wb4
+One of the sound is from book-scenario-ch5-wb4 and book-scenario-ch2-ch4-littlecrab5
 Credits can be found in game. 

@@ -12,6 +12,21 @@ public class Player extends Move
     private int coinsCount = 0;
     private int flowerCount = 0;
     private int RedCoinCount = 0;
+    private int counter = 0;
+    
+    private GreenfootImage image1;
+    private GreenfootImage image2;
+    
+        /**
+     * Create a crab and initialize its two images.
+     */
+    public Player()
+    {
+        image1 = new GreenfootImage("jump.png");
+        image2 = new GreenfootImage("duck.png");
+        setImage(image1);
+    }
+    
     /**
      * this method is called when the Player touches the coin the coin will disapear
      */
@@ -19,7 +34,7 @@ public class Player extends Move
         collectingCoins();
         collectingFlowers();
         collectingRedCoin();
-       slide();
+        slide();
      if(Greenfoot.isKeyDown("right")) {
       setRotation(0);
       move(4);
@@ -36,8 +51,31 @@ public class Player extends Move
       setRotation(90);
       move(4);
      }
+     
+     if (counter == 5) {
+         switchImage();
+         counter = 0;
+     }
+     else {
+         counter = counter + 1;
+     }
   }
   
+      /**
+     * Animation by switching images
+     */
+    public void switchImage()
+    {
+        if (getImage() == image1) 
+        {
+            setImage(image2);
+        }
+        else
+        {
+            setImage(image1);
+        }
+    }
+    
   /**
    * This method is made for the first level of this game, each time the player
    * collects coins.

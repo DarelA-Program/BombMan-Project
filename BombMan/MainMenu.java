@@ -46,6 +46,11 @@ public class MainMenu extends World
             Greenfoot.setWorld(new InstructionMenu());
             Greenfoot.playSound("Click.wav");
         }   
+        
+        if (Greenfoot.isKeyDown("c")){
+            Greenfoot.setWorld(new Credits());
+            Greenfoot.playSound("Click.wav");
+        } 
     }
     
     /**

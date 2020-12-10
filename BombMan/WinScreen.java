@@ -17,6 +17,19 @@ public class WinScreen extends MainWorld
     {
         prepare();
         showText();
+        displayText();
+    }
+    
+     /**
+     * When the user presses 'enter' it will bring them to the main menu
+     * 
+     */
+    public void act()
+    {
+        if (Greenfoot.isKeyDown("enter")){
+            Greenfoot.setWorld(new MainMenu());
+            Greenfoot.playSound("Click.wav");
+        }
     }
 
     /**
@@ -25,6 +38,14 @@ public class WinScreen extends MainWorld
      */
     public void showText() { 
         showText("You Win! RedCoins collect" + " " + RedCoinCount, 366, 210);
+    }
+    
+        /**
+     * Displays a text to go back to the main menu
+     * 
+     */
+    public void displayText() { 
+        showText("Press 'enter' to go back.", 355, 250);
     }
 
     /**

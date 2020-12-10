@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Shark extends Actor
 {
+    
     public Shark()
      /**
      * Flips the shark image so it faces the user
@@ -38,7 +39,7 @@ public class Shark extends Actor
         } 
     } 
     
-      /**
+   /**
    * This method is to when the shark eats the player
    */
   private void eatPlayer()
@@ -47,6 +48,6 @@ public class Shark extends Actor
            removeTouching(Player.class);
            Greenfoot.setWorld(new GameOverScreen());
            Greenfoot.playSound("game-over.wav");
-   }
+     }
   }
 }

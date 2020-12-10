@@ -10,7 +10,7 @@ public class Confirmation extends MainWorld
 {
 
     /**
-     * Constructor for objects of class Confirmation.
+     * When the user presses 'y' it will set the world to level 3
      * 
      */
     public void act()

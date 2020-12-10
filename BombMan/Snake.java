@@ -14,7 +14,6 @@ public class Snake extends Actor
   public void act() 
   {
       moveSnake();
-      eatPlayer();
   }
    /**
     * This method makes the snake move randomly
@@ -28,17 +27,6 @@ public class Snake extends Actor
     move(4);
    if (isAtEdge() == true) {
     turn (7);
-   }
-    }
-  /**
-   * This method is to when the snake eats the player
-   */
-  private void eatPlayer()
-  {
-     if(isTouching(Player.class)) {
-           removeTouching(Player.class);
-           Greenfoot.playSound("game-over.wav");
-           Greenfoot.setWorld(new GameOverScreen());
    }
   }
 }

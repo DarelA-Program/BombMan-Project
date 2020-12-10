@@ -15,7 +15,6 @@ public class Fireball extends Actor
     public void act() 
     {
         setLocation(getX()-5, getY());
-        eatPlayer();
         
         if (getX() == 0) 
         {
@@ -30,15 +29,4 @@ public class Fireball extends Actor
         GreenfootImage img = getImage();
         img.mirrorHorizontally();
     }
-    
-    /**
-      * This method will remove the player if it is touching the fireball object
-      */
-     private void eatPlayer() { 
-      if(isTouching(Player.class)) {
-           removeTouching(Player.class);
-           Greenfoot.playSound("game-over.wav");
-           Greenfoot.setWorld(new GameOverScreen());
-      }
-    }   
 }

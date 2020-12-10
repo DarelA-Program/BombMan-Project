@@ -13,11 +13,14 @@ public class Player extends Move
     private int RedCoinCount = 0;
     private int counter = 0;
     private int flowerCount = 0;
+    int level3Lives = 3;
+    int level2Lives = 3;
+    int level1Lives = 3;
     
     private GreenfootImage image1;
     private GreenfootImage image2;
     
-        /**
+     /**
      * Create a crab and initialize its two images.
      */
     public Player()
@@ -35,6 +38,9 @@ public class Player extends Move
         collectingFlowers();
         collectingRedCoin();
         slide();
+        level3Lives();
+        level2Lives();
+        level1Lives();
      if(Greenfoot.isKeyDown("right")) {
       setRotation(0);
       move(4);
@@ -59,9 +65,100 @@ public class Player extends Move
      else {
          counter = counter + 1;
      }
+     
   }
   
-      /**
+    /**
+     * Live lost whenever they touch an enemy for level 3
+     */
+  public void level3Lives()
+    {
+     {
+         if(isTouching(Shark.class)) {
+           level3Lives--;
+           setLocation(26,210);
+           getWorld().showText("Lives" + level3Lives, 600, 100);
+           if (level3Lives == 0) {
+              removeTouching(Player.class);
+              Greenfoot.setWorld(new GameOverScreen());
+              Greenfoot.playSound("game-over.wav");  
+           }
+         }
+         
+         if(isTouching(Fireball.class)) {
+           level3Lives--;
+           setLocation(26,210);
+           getWorld().showText("Lives" + level3Lives, 600, 100);
+           if (level3Lives == 0) {
+              removeTouching(Player.class);
+              Greenfoot.setWorld(new GameOverScreen());
+              Greenfoot.playSound("game-over.wav");  
+           }
+         }
+     }
+  }
+  
+  /**
+     * Live lost whenever they touch an enemy for level 2
+     */
+  public void level2Lives()
+    {
+     {
+         if(isTouching(Ant.class)) {
+           level2Lives--;
+           setLocation(26,210);
+           getWorld().showText("Lives" + level2Lives, 600, 100);
+           if (level2Lives == 0) {
+              removeTouching(Player.class);
+              Greenfoot.setWorld(new GameOverScreen());
+              Greenfoot.playSound("game-over.wav");  
+           }
+         }
+         
+         if(isTouching(Ant2.class)) {
+           level2Lives--;
+           setLocation(26,210);
+           getWorld().showText("Lives" + level2Lives, 600, 100);
+           if (level2Lives == 0) {
+              removeTouching(Player.class);
+              Greenfoot.setWorld(new GameOverScreen());
+              Greenfoot.playSound("game-over.wav");  
+           }
+         }
+     }
+  }
+ 
+   /**
+     * Live lost whenever they touch an enemy for level 1
+     */
+  public void level1Lives()
+    {
+     {
+         if(isTouching(Snake.class)) {
+           level1Lives--;
+           setLocation(56,367);
+           getWorld().showText("Lives" + level1Lives, 600, 100);
+           if (level1Lives == 0) {
+              removeTouching(Player.class);
+              Greenfoot.setWorld(new GameOverScreen());
+              Greenfoot.playSound("game-over.wav");  
+           }
+         }
+         
+         if(isTouching(Fly.class)) {
+           level1Lives--;
+           setLocation(56,367);
+           getWorld().showText("Lives" + level1Lives, 600, 100);
+           if (level1Lives == 0) {
+              removeTouching(Player.class);
+              Greenfoot.setWorld(new GameOverScreen());
+              Greenfoot.playSound("game-over.wav");  
+           }
+         }
+     }
+  }
+  
+  /**
      * Animation by switching images
      */
     public void switchImage()

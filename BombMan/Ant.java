@@ -16,20 +16,9 @@ public class Ant extends Actor
     {
       move(9);
       edge();
-      eatPlayer();
     }
     
-    /**
-      * This method will remove the player if it is touching the fly object
-      */
-     private void eatPlayer() { 
-      if(isTouching(Player.class)) {
-           removeTouching(Player.class);
-           Greenfoot.playSound("game-over.wav");
-           Greenfoot.setWorld(new GameOverScreen());
-      }
-    }
-      /**
+   /**
     * This method is to make the Fly objects move nonstop
      */
       public void edge() {

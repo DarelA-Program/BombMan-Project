@@ -40,7 +40,7 @@ public class WinScreen extends MainWorld
         showText("You Win! RedCoins collect" + " " + RedCoinCount, 366, 210);
     }
     
-        /**
+     /**
      * Displays a text to go back to the main menu
      * 
      */

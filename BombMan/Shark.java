@@ -9,13 +9,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Shark extends Actor
 {
     public Shark()
+     /**
+     * Flips the shark image so it faces the user
+     * 
+     */
     {
         GreenfootImage img = getImage();
-        img.mirrorHorizontally();
+        
+       {
+            img.mirrorHorizontally();
+       }
     }
     
     /**
-     * Act - do whatever the Shark wants to do. This method is called whenever
+     * Act - Calls the eatPlayer method and removes the shark when touching world
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

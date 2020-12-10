@@ -11,6 +11,7 @@ public class MainWorld extends World
     SimpleTimer timer = new SimpleTimer();
     Counter countDown = new Counter();
     int start = 0;
+
     /**
      * Constructor for objects of class MainWorld.
      * 
@@ -21,10 +22,14 @@ public class MainWorld extends World
         super(700, 400, 1); 
         addObject(countDown, 676, 15);
         countDown.setValue(300);
-        
+    
     }
     
     public void act()
+     /**
+     * Starts the timer and checks if the timer is equal to 0 
+     * Once the timer reaches 0, the game will end, timer starts when user moves
+     */
     {
        if (start == 1)
        {

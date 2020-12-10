@@ -10,9 +10,9 @@ import greenfoot.*;
 public class Player extends Move
 {
     private int coinsCount = 0;
-    private int flowerCount = 0;
     private int RedCoinCount = 0;
     private int counter = 0;
+    private int flowerCount = 0;
     
     private GreenfootImage image1;
     private GreenfootImage image2;
@@ -110,6 +110,8 @@ public class Player extends Move
             Greenfoot.setWorld(new Confirmation());
    }
 }
+
+
    
    /**
    * This method is made for the second level of this game, each time the player
@@ -122,12 +124,13 @@ public class Player extends Move
           Greenfoot.playSound("135936__bradwesson__collectcoin.wav");
           getWorld().showText("Red Coins Collected:" + RedCoinCount, 600, 50);
    }
-      if (RedCoinCount == 13) {
+      if (RedCoinCount == 23) {
             Greenfoot.stop();
-            getWorld().showText("Thank you for playing BOMBMAN",400,300);
-            Greenfoot.setWorld(new MainMenu());
+            Greenfoot.setWorld(new WinScreen());
    }
   }
+  
+  
 }
 
 
